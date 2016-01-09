@@ -50,13 +50,14 @@ body {
 }
 
 a {
-  text-decoration: none;
+  color: $bg-color-one;
 }
 
 ////////HEADER//////////////////
 .header-container {
   background-color: $bg-color-one;
   color: $white;
+  padding-top: 10px;
   @include flex-col;
   > div .personal-pic {
     border-radius: 100%;
@@ -78,29 +79,32 @@ a {
   color: $white;
   font-family: $second-font;
   @include flex-col;
-  height: 500px;
+  height: 600px;
+  text-align: center;
+  > div h1 {
+    @include heading;
+  }
   > .about-inner-container {
     @include flex-row;
     flex-flow: row nowrap;
     width: 55%;
-    height: 300px;
-    background-color: red;
+    height: 350px;
+    // background-color: red;
     > .adjectives {
-      flex: 1 0 30%;
-      background-color: yellow;
-      height: auto;
+      flex: 1 0 40%;
+      // background-color: yellow;
+      height: 230px;
+      // font-family: $main-font;
       font-size: 2.2em;
-      text-align: center;
+      align-self: center;
     }
-    > div .my-info {
-      flex: 1 0 70%;
-      font-size: 1.25em;
-      height: auto;
-      margin: 0 auto;
-      background-color: blue;
-    }
-    > div h1 {
-      @include heading;
+    > .my-info {
+      flex: 1 0 60%;
+      font-size: 1.15em;
+      height: 230px;
+      // background-color: blue;
+      text-align: justify;
+      align-self: center;
     }
   }
 }
