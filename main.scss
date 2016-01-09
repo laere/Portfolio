@@ -1,0 +1,90 @@
+//////////IMPORTS///////////////////
+@import 'bourbon/bourbon';
+@import 'base/base';
+@import '_normalize';
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+
+
+////////Variables//////////////////
+$white: #fff;
+$black: #000;
+$bg-color-one: #3e3e3e;
+$bg-color-two: #0EAD69;
+$main-font: 'Bangers', sans-serif;
+$second-font: 'Open Sans', sans-serif;
+
+////////MIXINS//////////////////
+@mixin flex-row() {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col() {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin heading() {
+  font-size: 3em;
+  font-family: $main-font;
+}
+
+////////BASE STYLES//////////////////
+html {
+  box-sizing: border-box;
+}
+*, *:after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $second-font;
+  line-height: 1.5;
+  letter-spacing: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+////////HEADER//////////////////
+.header-container {
+  background-color: $bg-color-one;
+  color: $white;
+  @include flex-col;
+   > div .personal-pic {
+      border-radius: 100%;
+      border: 1px solid #222;
+   }
+   > div h1 {
+     @include heading;
+   }
+   > div h2 {
+     font-size: .9em;
+   }
+}
+
+////////ABOUT ME//////////////////
+.about-container {
+  background-color: $bg-color-two;
+  color: $white;
+  font-family: $second-font;
+  @include flex-col;
+  height: 500px;
+
+    > div h1 {
+      @include heading;
+
+    }
+    > div .my-info {
+      width: 70%;
+      font-size: 1em;
+      margin: 0 auto;
+    }
+}
