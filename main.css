@@ -544,11 +544,12 @@ body {
   letter-spacing: 1; }
 
 a {
-  text-decoration: none; }
+  color: #3e3e3e; }
 
 .header-container {
   background-color: #3e3e3e;
   color: #fff;
+  padding-top: 10px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -572,7 +573,11 @@ a {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  height: 500px; }
+  height: 600px;
+  text-align: center; }
+  .about-container > div h1 {
+    font-size: 3em;
+    font-family: "Bangers", sans-serif; }
   .about-container > .about-inner-container {
     display: flex;
     flex-flow: row wrap;
@@ -580,22 +585,17 @@ a {
     align-items: center;
     flex-flow: row nowrap;
     width: 55%;
-    height: 300px;
-    background-color: red; }
+    height: 350px; }
     .about-container > .about-inner-container > .adjectives {
-      flex: 1 0 30%;
-      background-color: yellow;
-      height: auto;
+      flex: 1 0 40%;
+      height: 230px;
       font-size: 2.2em;
-      text-align: center; }
-    .about-container > .about-inner-container > div .my-info {
-      flex: 1 0 70%;
-      font-size: 1.25em;
-      height: auto;
-      margin: 0 auto;
-      background-color: blue; }
-    .about-container > .about-inner-container > div h1 {
-      font-size: 3em;
-      font-family: "Bangers", sans-serif; }
+      align-self: center; }
+    .about-container > .about-inner-container > .my-info {
+      flex: 1 0 60%;
+      font-size: 1.15em;
+      height: 230px;
+      text-align: justify;
+      align-self: center; }
 
 /*# sourceMappingURL=main.css.map */
