@@ -58,16 +58,18 @@ a {
   background-color: $bg-color-one;
   color: $white;
   @include flex-col;
-   > div .personal-pic {
-      border-radius: 100%;
-      border: 1px solid #222;
-   }
-   > div h1 {
-     @include heading;
-   }
-   > div h2 {
-     font-size: .9em;
-   }
+  > div .personal-pic {
+    border-radius: 100%;
+    border: 1px solid #222;
+  }
+  > div h1 {
+    @include heading;
+  }
+  > div h2 {
+    font-size: .9em;
+    margin-top: -10px;
+    padding-bottom: 5px;
+  }
 }
 
 ////////ABOUT ME//////////////////
@@ -77,14 +79,28 @@ a {
   font-family: $second-font;
   @include flex-col;
   height: 500px;
-
-    > div h1 {
-      @include heading;
-
+  > .about-inner-container {
+    @include flex-row;
+    flex-flow: row nowrap;
+    width: 55%;
+    height: 300px;
+    background-color: red;
+    > .adjectives {
+      flex: 1 0 30%;
+      background-color: yellow;
+      height: auto;
+      font-size: 2.2em;
+      text-align: center;
     }
     > div .my-info {
-      width: 70%;
-      font-size: 1em;
+      flex: 1 0 70%;
+      font-size: 1.25em;
+      height: auto;
       margin: 0 auto;
+      background-color: blue;
     }
+    > div h1 {
+      @include heading;
+    }
+  }
 }
