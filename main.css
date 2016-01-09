@@ -560,7 +560,9 @@ a {
     font-size: 3em;
     font-family: "Bangers", sans-serif; }
   .header-container > div h2 {
-    font-size: .9em; }
+    font-size: .9em;
+    margin-top: -10px;
+    padding-bottom: 5px; }
 
 .about-container {
   background-color: #0EAD69;
@@ -571,12 +573,29 @@ a {
   justify-content: center;
   align-items: center;
   height: 500px; }
-  .about-container > div h1 {
-    font-size: 3em;
-    font-family: "Bangers", sans-serif; }
-  .about-container > div .my-info {
-    width: 70%;
-    font-size: 1em;
-    margin: 0 auto; }
+  .about-container > .about-inner-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 55%;
+    height: 300px;
+    background-color: red; }
+    .about-container > .about-inner-container > .adjectives {
+      flex: 1 0 30%;
+      background-color: yellow;
+      height: auto;
+      font-size: 2.2em;
+      text-align: center; }
+    .about-container > .about-inner-container > div .my-info {
+      flex: 1 0 70%;
+      font-size: 1.25em;
+      height: auto;
+      margin: 0 auto;
+      background-color: blue; }
+    .about-container > .about-inner-container > div h1 {
+      font-size: 3em;
+      font-family: "Bangers", sans-serif; }
 
 /*# sourceMappingURL=main.css.map */
