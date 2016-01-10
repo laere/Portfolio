@@ -608,12 +608,12 @@ img {
         height: 680px;
         width: 95%; } }
     .about-container > .about-inner-container > .adjectives {
-      flex: 1 0 40%;
+      flex: 1 0 38.5%;
       height: 300px;
       font-size: 2.2em;
       align-self: center; }
     .about-container > .about-inner-container > .my-info {
-      flex: 1 0 60%;
+      flex: 1 0 58.5%;
       font-size: 1.15em;
       height: 300px;
       text-align: justify;
@@ -651,5 +651,43 @@ img {
       width: 625px;
       height: 300px;
       flex: 1 0 auto; }
+
+.social-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #0EAD69; }
+  .social-container > .social-media {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%; }
+    .social-container > .social-media > .img-bg {
+      background-color: #0c9b5e;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: inset 1px 1px 5px #086c41; }
+    .social-container > .social-media > div .soc-icons {
+      height: 60px;
+      width: 60px; }
+
+.footer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #3e3e3e;
+  border-bottom: 10px solid #333; }
+  .footer-container > p {
+    color: #fff;
+    font-family: "Bangers", sans-serif;
+    font-size: 1.25em;
+    align-self: flex-end; }
 
 /*# sourceMappingURL=main.css.map */
