@@ -546,6 +546,10 @@ body {
 a {
   color: #3e3e3e; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .header-container {
   background-color: #3e3e3e;
   color: #fff;
@@ -573,8 +577,11 @@ a {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 700px;
   text-align: center; }
+  @media (max-width: 520px) {
+    .about-container {
+      height: 850px; } }
   .about-container > div h1 {
     font-size: 3em;
     font-family: "Bangers", sans-serif; }
@@ -585,16 +592,34 @@ a {
     align-items: center;
     flex-flow: row nowrap;
     width: 55%;
-    height: 350px; }
+    height: 450px;
+    background-color: red; }
+    @media (max-width: 1220px) {
+      .about-container > .about-inner-container {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 65%; } }
+    @media (max-width: 683px) {
+      .about-container > .about-inner-container {
+        width: 85%; } }
+    @media (max-width: 520px) {
+      .about-container > .about-inner-container {
+        height: 680px;
+        width: 95%; } }
     .about-container > .about-inner-container > .adjectives {
       flex: 1 0 40%;
-      height: 230px;
+      background-color: yellow;
+      height: 300px;
+      font-family: "Bangers", sans-serif;
       font-size: 2.2em;
       align-self: center; }
     .about-container > .about-inner-container > .my-info {
       flex: 1 0 60%;
       font-size: 1.15em;
-      height: 230px;
+      height: 300px;
+      background-color: blue;
       text-align: justify;
       align-self: center; }
 
