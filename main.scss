@@ -97,7 +97,7 @@ img {
     flex-flow: row nowrap;
     width: 55%;
     height: 450px;
-    background-color: red;
+    // background-color: red;
     @media (max-width: 1220px) {
       @include flex-col;
       width: 65%;
@@ -110,19 +110,19 @@ img {
       width: 95%;
     }
     > .adjectives {
-      flex: 1 0 40%;
-      background-color: yellow;
+      flex: 1 0 38.5%;
+      // background-color: yellow;
       height: 300px;
-      font-family: $main-font;
+      // font-family: $main-font;
       font-size: 2.2em;
       align-self: center;
 
     }
     > .my-info {
-      flex: 1 0 60%;
+      flex: 1 0 58.5%;
       font-size: 1.15em;
       height: 300px;
-      background-color: blue;
+      // background-color: blue;
       text-align: justify;
       align-self: center;
     }
@@ -131,22 +131,82 @@ img {
 
 ////////PORTFOLIO//////////////////
 
-// .portfolio-container {
-//   background-color:  red;
-//   @include flex-row;
-//   height: 600px;
-//     > .row {
-//       background-color: yellow;
-//       @include flex-row;
-//       justify-content: space-between;
-//       height: 450px;
-//       width: 95%;
-//         > div .port-img {
-//             background-color: blue;
-//             width: 500px;
-//             height: 400px;
-//             flex: 1 0 32.5%;
-//
-//         }
-//     }
-// }
+.portfolio-container {
+  background-color:  red;
+  @include flex-row;
+  height: 650px;
+  @media (max-width: 1910px) {
+    height: auto;
+  }
+  > .row {
+    background-color: yellow;
+    @include flex-row;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    height: 49.5%;
+    width: 95%;
+    @media (max-width: 1910px) {
+      @include flex-col;
+      flex-wrap: wrap;
+    }
+    > div .port-img {
+      background-color: blue;
+      width: 625px;
+      height: 300px;
+
+    }
+  }
+}
+
+////////SOCIAL MEDIA//////////////////
+
+.social-container {
+  @include flex-row;
+  height: 200px;
+  background-color: $bg-color-two;
+  @media (max-width: 786px) {
+    height: 385px;
+  }
+  > .social-media {
+    @include flex-row;
+    justify-content: space-between;
+    width: 40%;
+    @media (max-width: 786px) {
+      flex-flow: column wrap;
+      margin: 10px 0;
+    }
+    > .img-bg {
+      background-color: #0c9b5e;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: inset 1px 1px 5px #086c41;
+      @media (max-width: 786px) {
+        margin: 10px 0;
+      }
+
+    }
+    > div .soc-icons {
+      height: 60px;
+      width: 60px;
+
+    }
+  }
+}
+
+
+////////FOOTER//////////////////
+
+.footer-container {
+  @include flex-row;
+  height: 100px;
+  background-color: $bg-color-one;
+  border-bottom: 10px solid #333;
+  > p {
+    color: $white;
+    font-family: $main-font;
+    font-size: 1.25em;
+    align-self: flex-end;
+
+  }
+}
