@@ -620,7 +620,6 @@ img {
       align-self: center; }
 
 .portfolio-container {
-  background-color: red;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -630,7 +629,6 @@ img {
     .portfolio-container {
       height: auto; } }
   .portfolio-container > .row {
-    background-color: yellow;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -647,9 +645,9 @@ img {
         align-items: center;
         flex-wrap: wrap; } }
     .portfolio-container > .row > div .port-img {
-      background-color: blue;
-      width: 625px;
-      height: 300px; }
+      width: 630px;
+      height: 315px;
+      vertical-align: middle; }
 
 .social-container {
   display: flex;
@@ -678,6 +676,8 @@ img {
       padding: 20px;
       border-radius: 20px;
       box-shadow: inset 1px 1px 5px #086c41; }
+      .social-container > .social-media > .img-bg:hover {
+        opacity: .75; }
       @media (max-width: 786px) {
         .social-container > .social-media > .img-bg {
           margin: 10px 0; } }
