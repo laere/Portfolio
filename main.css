@@ -544,11 +544,16 @@ body {
   letter-spacing: 1; }
 
 a {
-  text-decoration: none; }
+  color: #3e3e3e; }
+
+img {
+  max-width: 100%;
+  height: auto; }
 
 .header-container {
   background-color: #3e3e3e;
   color: #fff;
+  padding-top: 10px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -560,7 +565,9 @@ a {
     font-size: 3em;
     font-family: "Bangers", sans-serif; }
   .header-container > div h2 {
-    font-size: .9em; }
+    font-size: .9em;
+    margin-top: -10px;
+    padding-bottom: 5px; }
 
 .about-container {
   background-color: #0EAD69;
@@ -570,13 +577,50 @@ a {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  height: 500px; }
+  height: 700px;
+  text-align: center; }
+  @media (max-width: 520px) {
+    .about-container {
+      height: 850px; } }
   .about-container > div h1 {
     font-size: 3em;
     font-family: "Bangers", sans-serif; }
-  .about-container > div .my-info {
-    width: 70%;
-    font-size: 1em;
-    margin: 0 auto; }
+  .about-container > .about-inner-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 55%;
+    height: 450px;
+    background-color: red; }
+    @media (max-width: 1220px) {
+      .about-container > .about-inner-container {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 65%; } }
+    @media (max-width: 683px) {
+      .about-container > .about-inner-container {
+        width: 85%; } }
+    @media (max-width: 520px) {
+      .about-container > .about-inner-container {
+        height: 680px;
+        width: 95%; } }
+    .about-container > .about-inner-container > .adjectives {
+      flex: 1 0 40%;
+      background-color: yellow;
+      height: 300px;
+      font-family: "Bangers", sans-serif;
+      font-size: 2.2em;
+      align-self: center; }
+    .about-container > .about-inner-container > .my-info {
+      flex: 1 0 60%;
+      font-size: 1.15em;
+      height: 300px;
+      background-color: blue;
+      text-align: justify;
+      align-self: center; }
 
 /*# sourceMappingURL=main.css.map */

@@ -50,24 +50,32 @@ body {
 }
 
 a {
-  text-decoration: none;
+  color: $bg-color-one;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 ////////HEADER//////////////////
 .header-container {
   background-color: $bg-color-one;
   color: $white;
+  padding-top: 10px;
   @include flex-col;
-   > div .personal-pic {
-      border-radius: 100%;
-      border: 1px solid #222;
-   }
-   > div h1 {
-     @include heading;
-   }
-   > div h2 {
-     font-size: .9em;
-   }
+  > div .personal-pic {
+    border-radius: 100%;
+    border: 1px solid #222;
+  }
+  > div h1 {
+    @include heading;
+  }
+  > div h2 {
+    font-size: .9em;
+    margin-top: -10px;
+    padding-bottom: 5px;
+  }
 }
 
 ////////ABOUT ME//////////////////
@@ -76,15 +84,69 @@ a {
   color: $white;
   font-family: $second-font;
   @include flex-col;
-  height: 500px;
-
-    > div h1 {
-      @include heading;
+  height: 700px;
+  text-align: center;
+  @media(max-width: 520px) {
+    height: 850px;
+  }
+  > div h1 {
+    @include heading;
+  }
+  > .about-inner-container {
+    @include flex-row;
+    flex-flow: row nowrap;
+    width: 55%;
+    height: 450px;
+    background-color: red;
+    @media (max-width: 1220px) {
+      @include flex-col;
+      width: 65%;
+    }
+    @media (max-width: 683px) {
+      width: 85%;
+    }
+    @media (max-width: 520px) {
+      height: 680px;
+      width: 95%;
+    }
+    > .adjectives {
+      flex: 1 0 40%;
+      background-color: yellow;
+      height: 300px;
+      font-family: $main-font;
+      font-size: 2.2em;
+      align-self: center;
 
     }
-    > div .my-info {
-      width: 70%;
-      font-size: 1em;
-      margin: 0 auto;
+    > .my-info {
+      flex: 1 0 60%;
+      font-size: 1.15em;
+      height: 300px;
+      background-color: blue;
+      text-align: justify;
+      align-self: center;
     }
+  }
 }
+
+////////PORTFOLIO//////////////////
+
+// .portfolio-container {
+//   background-color:  red;
+//   @include flex-row;
+//   height: 600px;
+//     > .row {
+//       background-color: yellow;
+//       @include flex-row;
+//       justify-content: space-between;
+//       height: 450px;
+//       width: 95%;
+//         > div .port-img {
+//             background-color: blue;
+//             width: 500px;
+//             height: 400px;
+//             flex: 1 0 32.5%;
+//
+//         }
+//     }
+// }
