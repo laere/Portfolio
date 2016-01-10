@@ -132,14 +132,14 @@ img {
 ////////PORTFOLIO//////////////////
 
 .portfolio-container {
-  background-color:  red;
+  // background-color:  red;
   @include flex-row;
   height: 650px;
   @media (max-width: 1910px) {
     height: auto;
   }
   > .row {
-    background-color: yellow;
+    // background-color: yellow;
     @include flex-row;
     flex: 1 0 auto;
     justify-content: space-between;
@@ -150,9 +150,10 @@ img {
       flex-wrap: wrap;
     }
     > div .port-img {
-      background-color: blue;
-      width: 625px;
-      height: 300px;
+      // background-color: blue;
+      width: 630px;
+      height: 315px;
+      vertical-align: middle;
 
     }
   }
@@ -181,15 +182,16 @@ img {
       padding: 20px;
       border-radius: 20px;
       box-shadow: inset 1px 1px 5px #086c41;
+      &:hover {
+        opacity: .75;
+      }
       @media (max-width: 786px) {
         margin: 10px 0;
       }
-
     }
     > div .soc-icons {
       height: 60px;
       width: 60px;
-
     }
   }
 }
