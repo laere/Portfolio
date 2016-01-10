@@ -612,6 +612,8 @@ img {
       height: 300px;
       font-size: 2.2em;
       align-self: center; }
+      .about-container > .about-inner-container > .adjectives > .adj:hover {
+        font-family: "Bangers", sans-serif; }
     .about-container > .about-inner-container > .my-info {
       flex: 1 0 58.5%;
       font-size: 1.15em;
@@ -634,7 +636,7 @@ img {
     justify-content: center;
     align-items: center;
     flex: 1 0 auto;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 49.5%;
     width: 95%; }
     @media (max-width: 1910px) {
@@ -645,10 +647,19 @@ img {
         align-items: center;
         flex-wrap: wrap; } }
     .portfolio-container > .row > div .port-img {
-      width: 630px;
-      height: 315px;
+      width: 530px;
+      height: 310px;
       vertical-align: middle; }
-
+      .portfolio-container > .row > div .port-img:hover {
+        animation: grow .5s ease-out;
+        animation-fill-mode: forwards; }
+@keyframes grow {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.025); }
+  100% {
+    transform: scale(1.05); } }
 .social-container {
   display: flex;
   flex-flow: row wrap;
@@ -677,6 +688,8 @@ img {
       border-radius: 20px;
       box-shadow: inset 1px 1px 5px #086c41; }
       .social-container > .social-media > .img-bg:hover {
+        animation: shrink 0.5s ease-out;
+        animation-fill-mode: forwards;
         opacity: .75; }
       @media (max-width: 786px) {
         .social-container > .social-media > .img-bg {
@@ -684,7 +697,15 @@ img {
     .social-container > .social-media > div .soc-icons {
       height: 60px;
       width: 60px; }
-
+@keyframes shrink {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.95);
+    border-radius: 50%; }
+  100% {
+    transform: scale(0.9);
+    border-radius: 100%; } }
 .footer-container {
   display: flex;
   flex-flow: row wrap;
