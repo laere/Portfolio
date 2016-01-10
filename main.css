@@ -592,8 +592,7 @@ img {
     align-items: center;
     flex-flow: row nowrap;
     width: 55%;
-    height: 450px;
-    background-color: red; }
+    height: 450px; }
     @media (max-width: 1220px) {
       .about-container > .about-inner-container {
         display: flex;
@@ -610,17 +609,47 @@ img {
         width: 95%; } }
     .about-container > .about-inner-container > .adjectives {
       flex: 1 0 40%;
-      background-color: yellow;
       height: 300px;
-      font-family: "Bangers", sans-serif;
       font-size: 2.2em;
       align-self: center; }
     .about-container > .about-inner-container > .my-info {
       flex: 1 0 60%;
       font-size: 1.15em;
       height: 300px;
-      background-color: blue;
       text-align: justify;
       align-self: center; }
+
+.portfolio-container {
+  background-color: red;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 650px; }
+  @media (max-width: 1910px) {
+    .portfolio-container {
+      height: auto; } }
+  .portfolio-container > .row {
+    background-color: yellow;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    height: 49.5%;
+    width: 95%; }
+    @media (max-width: 1910px) {
+      .portfolio-container > .row {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; } }
+    .portfolio-container > .row > div .port-img {
+      background-color: blue;
+      width: 625px;
+      height: 300px;
+      flex: 1 0 auto; }
 
 /*# sourceMappingURL=main.css.map */
