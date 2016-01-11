@@ -66,7 +66,6 @@ img {
   @include flex-col;
   > div .personal-pic {
     border-radius: 100%;
-    border: 1px solid #222;
   }
   > div h1 {
     @include heading;
@@ -144,7 +143,7 @@ img {
   > .row {
     // background-color: yellow;
     @include flex-row;
-    flex: 1 0 auto;
+    // flex: 1 0 auto;
     justify-content: space-around;
     height: 49.5%;
     width: 95%;
@@ -154,8 +153,8 @@ img {
     }
     > div .port-img {
       // background-color: blue;
-      width: 530px;
-      height: 310px;
+      // width: 530px;
+      height: auto;
       vertical-align: middle;
        &:hover {
          animation: grow .5s ease-out;
