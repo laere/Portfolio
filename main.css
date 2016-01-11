@@ -625,7 +625,7 @@ img {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  height: 650px; }
+  height: 700px; }
   @media (max-width: 1910px) {
     .portfolio-container {
       height: auto; } }
@@ -637,13 +637,6 @@ img {
     justify-content: space-around;
     height: 49.5%;
     width: 95%; }
-    @media (max-width: 1910px) {
-      .portfolio-container > .row {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap; } }
     .portfolio-container > .row > div .port-img {
       width: 580px;
       height: auto;
