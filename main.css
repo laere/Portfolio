@@ -645,8 +645,10 @@ img {
         align-items: center;
         flex-wrap: wrap; } }
     .portfolio-container > .row > div .port-img {
+      width: 580px;
       height: auto;
-      vertical-align: middle; }
+      vertical-align: middle;
+      border: 1px solid #3e3e3e; }
       .portfolio-container > .row > div .port-img:hover {
         animation: grow .5s ease-out;
         animation-fill-mode: forwards; }
