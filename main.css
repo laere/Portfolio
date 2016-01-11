@@ -559,8 +559,7 @@ img {
   justify-content: center;
   align-items: center; }
   .header-container > div .personal-pic {
-    border-radius: 100%;
-    border: 1px solid #222; }
+    border-radius: 100%; }
   .header-container > div h1 {
     font-size: 3em;
     font-family: "Bangers", sans-serif; }
@@ -635,7 +634,6 @@ img {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    flex: 1 0 auto;
     justify-content: space-around;
     height: 49.5%;
     width: 95%; }
@@ -647,8 +645,7 @@ img {
         align-items: center;
         flex-wrap: wrap; } }
     .portfolio-container > .row > div .port-img {
-      width: 530px;
-      height: 310px;
+      height: auto;
       vertical-align: middle; }
       .portfolio-container > .row > div .port-img:hover {
         animation: grow .5s ease-out;
