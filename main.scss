@@ -136,7 +136,7 @@ img {
 .portfolio-container {
   // background-color:  red;
   @include flex-row;
-  height: 650px;
+  height: 700px;
   @media (max-width: 1910px) {
     height: auto;
   }
@@ -147,10 +147,10 @@ img {
     justify-content: space-around;
     height: 49.5%;
     width: 95%;
-    @media (max-width: 1910px) {
-      @include flex-col;
-      flex-wrap: wrap;
-    }
+    // @media (max-width: 1910px) {
+    //   @include flex-col;
+    //   flex-wrap: wrap;
+    // }
     > div .port-img {
       //background-color: blue;
       width: 580px;
