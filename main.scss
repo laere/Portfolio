@@ -141,7 +141,7 @@ img {
     height: auto;
   }
   > .row {
-    // background-color: yellow;
+    //background-color: yellow;
     @include flex-row;
     // flex: 1 0 auto;
     justify-content: space-around;
@@ -152,10 +152,11 @@ img {
       flex-wrap: wrap;
     }
     > div .port-img {
-      // background-color: blue;
-      // width: 530px;
+      //background-color: blue;
+      width: 580px;
       height: auto;
       vertical-align: middle;
+      border: 1px solid $bg-color-one;
        &:hover {
          animation: grow .5s ease-out;
          animation-fill-mode: forwards;
