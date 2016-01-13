@@ -559,8 +559,7 @@ img {
   justify-content: center;
   align-items: center; }
   .header-container > div .personal-pic {
-    border-radius: 100%;
-    border: 1px solid #222; }
+    border-radius: 100%; }
   .header-container > div h1 {
     font-size: 3em;
     font-family: "Bangers", sans-serif; }
@@ -612,6 +611,8 @@ img {
       height: 300px;
       font-size: 2.2em;
       align-self: center; }
+      .about-container > .about-inner-container > .adjectives > .adj:hover {
+        font-family: "Bangers", sans-serif; }
     .about-container > .about-inner-container > .my-info {
       flex: 1 0 58.5%;
       font-size: 1.15em;
@@ -625,33 +626,45 @@ img {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  height: 650px; }
-  @media (max-width: 1910px) {
+  height: 700px; }
+  @media (max-width: 1710px) {
     .portfolio-container {
-      height: auto; } }
+      height: auto;
+      overflow: hidden; } }
   .portfolio-container > .row {
     background-color: yellow;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    flex: 1 0 auto;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     height: 49.5%;
-    width: 95%; }
-    @media (max-width: 1910px) {
+    width: 98%; }
+    @media (max-width: 1710px) {
       .portfolio-container > .row {
+        height: auto;
+        width: 47.5%;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
-        align-items: center;
-        flex-wrap: wrap; } }
+        align-items: center; } }
     .portfolio-container > .row > div .port-img {
-      background-color: blue;
-      width: 625px;
-      height: 300px;
-      flex: 1 0 auto; }
-
+      width: 580px;
+      height: 315px;
+      vertical-align: middle;
+      border: 1px solid #3e3e3e;
+      box-shadow: 1px 1px 10px #666; }
+      .portfolio-container > .row > div .port-img:hover {
+        animation: grow .5s ease-out;
+        animation-fill-mode: forwards; }
+@keyframes grow {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.025); }
+  100% {
+    transform: scale(1.05); } }
 .social-container {
   display: flex;
   flex-flow: row wrap;
@@ -659,23 +672,46 @@ img {
   align-items: center;
   height: 200px;
   background-color: #0EAD69; }
+  @media (max-width: 786px) {
+    .social-container {
+      height: 385px; } }
   .social-container > .social-media {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+    align-self: center;
     width: 40%; }
+    @media (max-width: 786px) {
+      .social-container > .social-media {
+        flex-flow: column wrap;
+        margin: 10px 0; } }
     .social-container > .social-media > .img-bg {
       background-color: #0c9b5e;
       text-align: center;
       padding: 20px;
       border-radius: 20px;
       box-shadow: inset 1px 1px 5px #086c41; }
+      .social-container > .social-media > .img-bg:hover {
+        animation: shrink 0.5s ease-out;
+        animation-fill-mode: forwards;
+        opacity: .75; }
+      @media (max-width: 786px) {
+        .social-container > .social-media > .img-bg {
+          margin: 10px 0; } }
     .social-container > .social-media > div .soc-icons {
       height: 60px;
       width: 60px; }
-
+@keyframes shrink {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.95);
+    border-radius: 50%; }
+  100% {
+    transform: scale(0.9);
+    border-radius: 100%; } }
 .footer-container {
   display: flex;
   flex-flow: row wrap;
