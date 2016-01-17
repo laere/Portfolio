@@ -35,6 +35,7 @@ $second-font: 'Open Sans', sans-serif;
   font-family: $main-font;
 }
 
+
 ////////BASE STYLES//////////////////
 html {
   box-sizing: border-box;
@@ -58,22 +59,32 @@ img {
   height: auto;
 }
 
+h1 {
+  margin: 0;
+}
+
+
 ////////HEADER//////////////////
 .header-container {
   background-color: $bg-color-one;
   color: $white;
   padding-top: 10px;
-  @include flex-col;
+  border-bottom: 4px solid #333;
   > div .personal-pic {
     border-radius: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
   }
   > div h1 {
     @include heading;
+    text-align: center;
   }
   > div h2 {
     font-size: .9em;
-    margin-top: -10px;
     padding-bottom: 5px;
+    text-align: center;
+    margin-top: -12px;
   }
 }
 
@@ -96,28 +107,24 @@ img {
     flex-flow: row nowrap;
     width: 55%;
     height: 450px;
-    // background-color: red;
-    @media (max-width: 1220px) {
-      @include flex-col;
-      width: 65%;
-    }
+    display: block;
     @media (max-width: 683px) {
       width: 85%;
+      display: block;
     }
     @media (max-width: 520px) {
-      height: 680px;
-      width: 95%;
+      height: auto;
     }
     > .adjectives {
       flex: 1 0 38.5%;
-      // background-color: yellow;
       height: 300px;
       // font-family: $main-font;
       font-size: 2.2em;
       align-self: center;
-        > .adj:hover {
-          font-family: $main-font;
-        }
+      @media (max-width: 683px) {
+        height: auto;
+        display: block;
+      }
 
     }
     > .my-info {
@@ -127,54 +134,62 @@ img {
       // background-color: blue;
       text-align: justify;
       align-self: center;
+      @media (max-width: 683px) {
+        height: auto;
+        display: block;
+      }
     }
   }
 }
 
 ////////PORTFOLIO//////////////////
 
-.portfolio-container {
-  // background-color:  red;
+.row {
+  //background-color: yellow;
   @include flex-row;
-  height: 700px;
-  @media (max-width: 1910px) {
-    height: auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media (max-width: 1765px) {
+    @include flex-col;
   }
-  > .row {
-    //background-color: yellow;
-    @include flex-row;
-    // flex: 1 0 auto;
-    justify-content: space-around;
-    height: 49.5%;
-    width: 95%;
-    // @media (max-width: 1910px) {
-    //   @include flex-col;
-    //   flex-wrap: wrap;
-    // }
-    > div .port-img {
-      //background-color: blue;
-      width: 580px;
+  > div .port-img {
+    //background-color: blue;
+    height: 315px;
+    width: 580px;
+    margin: 10px;
+    border: 1px solid $bg-color-one;
+    box-shadow: 1px 1px 10px #666;
+      > h2 {
+        background-color: yellow;
+        width: 100%;
+        height: auto;
+      }
+    @media (max-width: 636px) {
       height: auto;
-      vertical-align: middle;
-      border: 1px solid $bg-color-one;
-       &:hover {
-         animation: grow .5s ease-out;
-         animation-fill-mode: forwards;
-       }
+      max-width: 100%;
+      margin: 0 auto;
     }
-    @keyframes grow {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.025);
-      }
-      100% {
-        transform: scale(1.05);
-      }
+    &:hover {
+      animation: grow .5s ease-out;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.025);
+    }
+    100% {
+      transform: scale(1.05);
     }
   }
 }
+
 
 ////////SOCIAL MEDIA//////////////////
 
@@ -188,10 +203,11 @@ img {
   > .social-media {
     @include flex-row;
     justify-content: space-between;
+    align-self: center;
     width: 40%;
+    margin: 10px auto;
     @media (max-width: 786px) {
       flex-flow: column wrap;
-      margin: 10px 0;
     }
     > .img-bg {
       background-color: #0c9b5e;
@@ -232,15 +248,15 @@ img {
 ////////FOOTER//////////////////
 
 .footer-container {
-  @include flex-row;
-  height: 100px;
+  padding-top: 10px;
+  padding-bottom: 12px;
   background-color: $bg-color-one;
-  border-bottom: 10px solid #333;
-  > p {
-    color: $white;
-    font-family: $main-font;
-    font-size: 1.25em;
-    align-self: flex-end;
-
-  }
+  border-top: 4px solid #333;
+  text-align: center;
+  color: $white;
+  font-family: $main-font;
+  font-size: 1.25em;
+    p {
+      margin: 0;
+    }
 }
