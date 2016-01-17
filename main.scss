@@ -70,23 +70,33 @@ h1 {
 .header-container {
   background-color: $bg-color-one;
   color: $white;
-  padding-top: 10px;
-  border-bottom: 4px solid #333;
-  > div .personal-pic {
+  padding: 32px 32px 32px;
+  border-bottom: 1px solid #666;
+
+  .personal-pic {
     border-radius: 100%;
-    text-align: center;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 32px;
+    height: 240px;
+    width: 240px;
+
+    @media (max-width: 786px) {
+      height: 180px;
+      width: 180px;
+    }
   }
-  > div h1 {
+
+  h1 {
+    margin-bottom: 4px;
+    text-align: center;
     @include heading;
-    text-align: center;
   }
-  > div h2 {
+
+  h2 {
     font-size: .9em;
-    padding-bottom: 5px;
     text-align: center;
-    margin-top: -12px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -95,83 +105,79 @@ h1 {
   background-color: $bg-color-two;
   color: $white;
   font-family: $second-font;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 700px;
+  padding: 48px 32px 32px;
   text-align: center;
-  @media(max-width: 520px) {
-    height: 850px;
-  }
-  > div h1 {
+
+  h1 {
+    font-size: 3.4em;
+    margin-bottom: 24px;
     @include heading;
-  }
-  > .about-inner-container {
-    background-color: red;
-    @include flex-row;
-    
-    width: 55%;
-    height: 450px;
-    display: block;
+
     @media (max-width: 683px) {
-      width: 85%;
-      display: block;
+      margin-bottom: 16px;
     }
-    @media (max-width: 520px) {
-      height: auto;
-    }
-    > .adjectives {
-      align-self: flex-end;
-      width: 50%;
-      padding: 10px;
-      background-color: yellow;
-      font-size: 2.2em;
-      align-self: center;
-      @media (max-width: 683px) {
-        height: auto;
+  }
+  @media (max-width: 683px) {
+    padding: 32px 24px 32px;
+  }
+
+  .about-inner-container {
+    display: block;
+    margin: 0 auto;
+    max-width: 920px;
+
+    .adjectives {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 16px;
+      font-size: 1.9em;
+
+      .adj {
         display: block;
-        float: none;
+      }
+
+      @media (max-width: 683px) {
+        display: block;
       }
 
     }
-    > .my-info {
-      align-self: flex-start;
-      width: 50%;
-      font-size: 1.15em;
-      padding: 10px;
-      background-color: blue;
-      text-align: justify;
-      align-self: center;
-      @media (max-width: 683px) {
-        height: auto;
-        display: block;
-        float: none;
-      }
+    .my-info {
+      margin: 0 auto 48px;
+      font-size: 18px;
+      max-width: 660px;
+      text-align: left;
+    }
+
+    .my-info a {
+      color: $white;
+      font-weight: bold;
+      text-decoration: underline;
     }
   }
 }
 
 ////////PORTFOLIO//////////////////
-.row {
-  @include flex-row;
-  justify-content: center;
-  align-items: center;
-  height: 45%;
-  > div .port-img {
-    //background-color: blue;
+.portfolio {
+  padding: 48px 32px 32px;
+
+  a {
+    margin: 0 auto;
+  }
+
+  > div {
+
+    text-align: center;
+  }
+  .port-img {
+    border: 1px solid #ccc;
     height: 315px;
+    margin: 10px 10px 32px;
     width: 580px;
-    margin: 10px;
-    border: 1px solid $bg-color-one;
-    box-shadow: 1px 1px 10px #666;
-      > h2 {
-        width: 100%;
-        height: auto;
-      }
+
     @media (max-width: 636px) {
-      height: auto;
       max-width: 100%;
-      margin: 0 auto;
+      margin: 0 auto 32px;
     }
     &:hover {
       animation: grow .5s ease-out;
@@ -197,32 +203,39 @@ h1 {
 
 .social-container {
   @include flex-row;
-  height: 200px;
   background-color: $bg-color-two;
   @media (max-width: 786px) {
-    height: 385px;
+    display: block;
   }
   > .social-media {
     @include flex-row;
-    justify-content: space-between;
     align-self: center;
-    width: 40%;
+    justify-content: space-between;
     margin: 10px auto;
+    width: 40%;
     @media (max-width: 786px) {
-      flex-flow: column wrap;
+      display: block;
+      margin: 0 auto;
+      padding: 32px 0;
     }
     > .img-bg {
       background-color: #0c9b5e;
-      text-align: center;
-      padding: 20px;
       border-radius: 20px;
       box-shadow: inset 1px 1px 5px #086c41;
+      margin-bottom: 16px;
+      padding: 20px;
+      text-align: center;
       &:hover {
         animation: shrink 0.5s ease-out;
         animation-fill-mode: forwards;
         opacity: .75;
       }
     }
+
+    .img-bg:last-child {
+      margin-bottom: 0;
+    }
+
     > div .soc-icons {
       height: 60px;
       width: 60px;
@@ -248,12 +261,13 @@ h1 {
 
 .footer-container {
   background-color: $bg-color-one;
-  border-top: 4px solid #333;
   text-align: center;
   color: $white;
   font-family: $main-font;
   font-size: 1.25em;
-    p {
-      margin: 0;
-    }
+  p {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 24px 0 18px;
+  }
 }
