@@ -39,6 +39,8 @@ $second-font: 'Open Sans', sans-serif;
 ////////BASE STYLES//////////////////
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 *, *:after, *::before {
   box-sizing: border-box;
@@ -59,22 +61,32 @@ img {
   height: auto;
 }
 
+h1 {
+  margin: 0;
+}
+
+
 ////////HEADER//////////////////
 .header-container {
   background-color: $bg-color-one;
   color: $white;
   padding-top: 10px;
-  @include flex-col;
+  border-bottom: 4px solid #333;
   > div .personal-pic {
     border-radius: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
   }
   > div h1 {
     @include heading;
+    text-align: center;
   }
   > div h2 {
     font-size: .9em;
-    margin-top: -10px;
     padding-bottom: 5px;
+    text-align: center;
+    margin-top: -12px;
   }
 }
 
@@ -97,28 +109,24 @@ img {
     flex-flow: row nowrap;
     width: 55%;
     height: 450px;
-    // background-color: red;
-    @media (max-width: 1220px) {
-      @include flex-col;
-      width: 65%;
-    }
+    display: block;
     @media (max-width: 683px) {
       width: 85%;
+      display: block;
     }
     @media (max-width: 520px) {
-      height: 680px;
-      width: 95%;
+      height: auto;
     }
     > .adjectives {
       flex: 1 0 38.5%;
-      // background-color: yellow;
       height: 300px;
       // font-family: $main-font;
       font-size: 2.2em;
       align-self: center;
-        > .adj:hover {
-          font-family: $main-font;
-        }
+      @media (max-width: 683px) {
+        height: auto;
+        display: block;
+      }
 
     }
     > .my-info {
@@ -128,76 +136,55 @@ img {
       // background-color: blue;
       text-align: justify;
       align-self: center;
+      @media (max-width: 683px) {
+        height: auto;
+        display: block;
+      }
     }
   }
 }
 
 ////////PORTFOLIO//////////////////
-
-.portfolio-container {
-  background-color:  red;
+.row {
   @include flex-row;
-  height: 700px;
-  @media (max-width: 1710px) {
-    height: auto;
-    overflow: hidden;
-  }
-  > .row {
-    background-color: yellow;
-    @include flex-row;
-    justify-content: space-around;
-    align-items: center;
-    height: 49.5%;
-    width: 98%;
-    @media (max-width: 1710px) {
+  justify-content: center;
+  align-items: center;
+  height: 45%;
+  > div .port-img {
+    //background-color: blue;
+    height: 315px;
+    width: 580px;
+    margin: 10px;
+    border: 1px solid $bg-color-one;
+    box-shadow: 1px 1px 10px #666;
+      > h2 {
+        width: 100%;
+        height: auto;
+      }
+    @media (max-width: 636px) {
       height: auto;
-      width: 47.5%;
-      @include flex-col;
+      max-width: 100%;
+      margin: 0 auto;
     }
-    > div .port-img {
-      //background-color: blue;
-      width: 580px;
-      height: 315px;
-      vertical-align: middle;
-      border: 1px solid $bg-color-one;
-      box-shadow: 1px 1px 10px #666;
-       &:hover {
-         animation: grow .5s ease-out;
-         animation-fill-mode: forwards;
-       }
+    &:hover {
+      animation: grow .5s ease-out;
+      animation-fill-mode: forwards;
     }
-    // .port-img-2 {
-    //   @extend .port-img;
-    //   background: url('images/rpsgame.png') no-repeat;
-    //   background: cover;
-    // }
-    // .port-img-3 {
-    //   @extend .port-img;
-    // }
-    // .port-img-4 {
-    //   @extend .port-img;
-    // }
-    // .port-img-5 {
-    //   @extend .port-img;
-    // }
-    // .port-img-6 {
-    //   @extend .port-img;
-    // }
+  }
 
-
-    @keyframes grow {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.025);
-      }
-      100% {
-        transform: scale(1.05);
-      }
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.025);
+    }
+    100% {
+      transform: scale(1.05);
     }
   }
 }
+
 
 ////////SOCIAL MEDIA//////////////////
 
@@ -213,9 +200,9 @@ img {
     justify-content: space-between;
     align-self: center;
     width: 40%;
+    margin: 10px auto;
     @media (max-width: 786px) {
       flex-flow: column wrap;
-      margin: 10px 0;
     }
     > .img-bg {
       background-color: #0c9b5e;
@@ -227,9 +214,6 @@ img {
         animation: shrink 0.5s ease-out;
         animation-fill-mode: forwards;
         opacity: .75;
-      }
-      @media (max-width: 786px) {
-        margin: 10px 0;
       }
     }
     > div .soc-icons {
@@ -256,15 +240,13 @@ img {
 ////////FOOTER//////////////////
 
 .footer-container {
-  @include flex-row;
-  height: 100px;
   background-color: $bg-color-one;
-  border-bottom: 10px solid #333;
-  > p {
-    color: $white;
-    font-family: $main-font;
-    font-size: 1.25em;
-    align-self: flex-end;
-
-  }
+  border-top: 4px solid #333;
+  text-align: center;
+  color: $white;
+  font-family: $main-font;
+  font-size: 1.25em;
+    p {
+      margin: 0;
+    }
 }
