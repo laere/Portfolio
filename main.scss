@@ -95,7 +95,9 @@ h1 {
   background-color: $bg-color-two;
   color: $white;
   font-family: $second-font;
-  @include flex-col;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 700px;
   text-align: center;
   @media(max-width: 520px) {
@@ -105,8 +107,9 @@ h1 {
     @include heading;
   }
   > .about-inner-container {
+    background-color: red;
     @include flex-row;
-    flex-flow: row nowrap;
+    
     width: 55%;
     height: 450px;
     display: block;
@@ -118,27 +121,31 @@ h1 {
       height: auto;
     }
     > .adjectives {
-      flex: 1 0 38.5%;
-      height: 300px;
-      // font-family: $main-font;
+      align-self: flex-end;
+      width: 50%;
+      padding: 10px;
+      background-color: yellow;
       font-size: 2.2em;
       align-self: center;
       @media (max-width: 683px) {
         height: auto;
         display: block;
+        float: none;
       }
 
     }
     > .my-info {
-      flex: 1 0 58.5%;
+      align-self: flex-start;
+      width: 50%;
       font-size: 1.15em;
-      height: 300px;
-      // background-color: blue;
+      padding: 10px;
+      background-color: blue;
       text-align: justify;
       align-self: center;
       @media (max-width: 683px) {
         height: auto;
         display: block;
+        float: none;
       }
     }
   }
