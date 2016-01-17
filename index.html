@@ -12,35 +12,34 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" integrity="sha384-XXXXXXXX" crossorigin="anonymous">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <!--[if lt IE 8]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <!-- HEADER START -->
-  <header>
-    <div class="header-container">
-      <div><img src="http://i.imgur.com/2r7ouW1.jpg" alt="Zack Bostian" width="200px" height="200px" class="personal-pic"></div>
-      <div><h1 class='heading'>Zack Bostian</h1></div>
-      <div><h2>Front-end Developer</h2></div>
-    </div>
+  <header class="header-container">
+    <img src="http://i.imgur.com/2r7ouW1.jpg" alt="Zack Bostian" class="personal-pic">
+    <h1 class='heading'>Zack Bostian</h1>
+    <h2>Front-end Developer</h2>
   </header>
   <!-- HEADER END -->
 
   <!-- ABOUT START -->
   <main role="main">
     <div class="about-container">
+      <h1 class='heading'>About Me</h1>
       <div class="about-inner-container">
-        <div><h1 class='heading'>About Me</h1></div>
-          <div class="my-info">I have an unbelievable thirst for creating, learning, and bringing ideas to life! I am always working hard on improving myself as a developer.
-            I am a fast learner, great communicator, and love learning how everything works and fits together. I am very <strong>knowledgable in Vanilla JS/jQUERY, HTML, CSS/SASS, and Git workflow.</strong>
-            I am willing to learn whatever it takes to get the job done, and deliver and amazing product to clients! Visit <a href="#here">my social media</a> to get in touch!
-          </div>
+        <p class="my-info">
+          I have an unbelievable thirst for creating, learning, and bringing ideas to life! I am always working hard on improving myself as a developer.
+          I am a fast learner, great communicator, and love learning how everything works and fits together. I am very <strong>knowledgable in Vanilla JS/jQUERY, HTML, CSS/SASS, and Git workflow.</strong>
+          I am willing to learn whatever it takes to get the job done, and deliver and amazing product to clients! Visit <a href="#here">my social media</a> to get in touch!
+        </p>
           <div class="adjectives">
-            <div class="adj">Learning</div>
-            <div class="adj">Creating</div>
-            <div class="adj">Growing</div>
+            <span class="adj">Learning</span>
+            <span class="adj">Creating</span>
+            <span class="adj">Growing</span>
           </div>
         </div>
       </div>
@@ -48,16 +47,28 @@
   <!-- ABOUT END -->
 
   <!-- PORTFOLIO START -->
-  <article>
-      <div class="row">
-        <div><a href="http://laere.github.io/To-Do-List/"><img class="port-img" src="images/todolist.png" alt="To-Do-List"></a></div>
-        <div><a href="http://laere.github.io/RPS/"><img class="port-img" src="images/rpsgame.png" alt="Rock, Paper, Scissors Game"></a></div>
-        <div><a href="http://laere.github.io/Flexbox-Project/"><img class="port-img" src="images/flexbox2.png" alt="Simple Layout using Flexbox"></a></div>
-        <div><a href="http://laere.github.io/Weather/"><img class="port-img" src="images/weather.png" alt="Weather API App"></a></div>
-        <div><a href="http://laere.github.io/Responsive-Website-Layout/"><img class="port-img" src="images/flexbox1.png" alt="Simple Website Template"></a></div>
-        <div><a href="http://laere.github.io/Pomodoro/"><img class="port-img" src="images/pomodoropic.png"></a></div>
-      </div>
-  </article>
+  <section class="portfolio">
+    <div>
+      <a href="http://laere.github.io/To-Do-List/">
+        <img class="port-img" src="images/todolist.png" alt="To-Do-List">
+      </a>
+    </div>
+    <div>
+      <a href="http://laere.github.io/RPS/"><img class="port-img" src="images/rpsgame.png" alt="Rock, Paper, Scissors Game"></a>
+    </div>
+    <div>
+      <a href="http://laere.github.io/Flexbox-Project/"><img class="port-img" src="images/flexbox2.png" alt="Simple Layout using Flexbox"></a>
+    </div>
+    <div>
+      <a href="http://laere.github.io/Weather/"><img class="port-img" src="images/weather.png" alt="Weather API App"></a>
+    </div>
+    <div>
+      <a href="http://laere.github.io/Responsive-Website-Layout/"><img class="port-img" src="images/flexbox1.png" alt="Simple Website Template"></a>
+    </div>
+    <div>
+      <a href="http://laere.github.io/Pomodoro/"><img class="port-img" src="images/pomodoropic.png"></a>
+    </div>
+  </section>
   <!-- PORTFOLIO END -->
 
   <!-- SOCIAL MEDIA START -->
